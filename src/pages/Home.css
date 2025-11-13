@@ -1,0 +1,132 @@
+/* src/pages/Home.css */
+
+.home {
+  padding: 3rem 3rem 4rem;
+}
+
+.hero {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 1fr);
+  gap: 3rem;
+  align-items: center;
+}
+
+.hero-text {
+  max-width: 36rem;
+}
+
+.badge {
+  color: var(--accent-start);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.8rem;
+  margin-bottom: 1rem;
+}
+
+.hero-text h1 {
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  margin-bottom: 1.5rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.note {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.hero-visual {
+  display: flex;
+  justify-content: center;
+}
+
+
+
+@media (max-width: 900px) {
+  .home {
+    padding-inline: 1.2rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+  }
+}
+/* aurora */
+.home-page-wrapper {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+
+/* Floating robot with no card */
+.robot-floating {
+  width: 420px;
+  height: auto;
+  object-fit: contain;
+  animation: float 4s ease-in-out infinite;
+
+  position: relative;
+  right: 8%;        /* move robot slightly toward center */
+  margin-top: 1rem;
+}
+
+/* Floating animation */
+@keyframes float {
+  0% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+  100% { transform: translateY(0); }
+}
+
+.btn.green {
+  display: inline-block;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #0f3d0f;
+  background: #7cff67;
+
+  text-decoration: none;   /* remove underline */
+
+  box-shadow: 0 10px 20px rgba(124, 255, 103, 0.35);
+  transition: all 0.2s ease;
+}
+
+.btn.green:hover {
+  background: #6ef658;
+  transform: translateY(-2px);
+  box-shadow: 0 14px 24px rgba(124, 255, 103, 0.45);
+}
+
+/* Secondary outline button */
+.btn.green-outline {
+  display: inline-block;
+  padding: 0.75rem 1.6rem;
+  border-radius: 999px;
+  font-size: 1rem;
+  font-weight: 600;
+
+  color: #0f3d0f;
+  border: 2px solid #7cff67;
+  background: transparent;
+
+  text-decoration: none;   /* remove underline */
+
+  transition: all 0.2s ease;
+}
+
+.btn.green-outline:hover {
+  background: rgba(124, 255, 103, 0.15);
+  transform: translateY(-2px);
+}

@@ -1,0 +1,212 @@
+/* ============================
+   NAVBAR CONTAINER
+=============================== */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 3rem;
+
+  /* Frosted Glass Header */
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  border-bottom: 1px solid rgba(255, 255, 255, 0.25);
+
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+/* ============================
+   LEFT SIDE
+=============================== */
+.nav-left {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+/* ============================
+   LOGO
+=============================== */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  text-decoration: none;
+}
+
+.logo-icon {
+  font-size: 1.6rem;
+}
+
+.logo-text {
+  font-weight: 800;
+  font-size: 1.35rem;
+  letter-spacing: 0.02em;
+  display: flex;
+  gap: 0.15rem;
+}
+
+/* Theme-driven colors */
+.logo-burn {
+  color: var(--logo-burn);
+}
+
+.logo-out {
+  color: var(--logo-out);
+}
+
+/* ============================
+   NAV PILLS (MAIN BUTTONS)
+=============================== */
+.nav-pill-menu {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+}
+
+/* BIGGER, PREMIUM PILL STYLE */
+.pill {
+  padding: 0.65rem 1.4rem;             
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.55);
+
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+
+  box-shadow:
+    0 4px 6px rgba(0, 0, 0, 0.08),
+    0 1px 3px rgba(0, 0, 0, 0.05);
+
+  transition: all 0.2s ease;
+}
+
+/* Hover lift */
+.pill:hover {
+  background: rgba(255, 255, 255, 0.75);
+  transform: translateY(-2px);
+  box-shadow:
+    0 12px 24px rgba(0, 0, 0, 0.14),
+    0 3px 6px rgba(0, 0, 0, 0.08);
+}
+
+/* Active click */
+.pill:active {
+  transform: translateY(0px);
+  box-shadow:
+    0 2px 4px rgba(0, 0, 0, 0.12),
+    0 1px 2px rgba(0, 0, 0, 0.08);
+}
+
+/* ============================
+   RIGHT SIDE: Links + Buttons
+=============================== */
+.nav-right {
+  display: flex;
+  align-items: center;
+  gap: 1.1rem;
+}
+
+/* Sign In Link */
+.nav-link {
+  text-decoration: none !important;
+  color: #0f3d0f !important;   /* dark green */
+  font-weight: 500;
+  opacity: 0.9;
+  transition: opacity 0.2s ease;
+}
+
+.nav-link:hover {
+  opacity: 1;
+}
+
+.nav-link-active {
+  color: #0a2e0a !important;   /* slightly darker green */
+  font-weight: 600;
+}
+
+/* ============================
+   SIGN UP BUTTON (GRADIENT)
+=============================== */
+.btn {
+  border-radius: 999px;
+  border: none;
+  cursor: pointer;
+  font-weight: 500;
+  padding: 0.55rem 1.3rem;
+  font-size: 0.95rem;
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, #ff6b3d, #7cff67);
+  color: white;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.25),
+    0 1px 4px rgba(0, 0, 0, 0.14);
+}
+
+.btn.primary:hover {
+  filter: brightness(1.04);
+  transform: translateY(-1px);
+}
+
+.btn.small {
+  padding: 0.45rem 1.15rem;
+  font-size: 0.9rem;
+}
+
+/* ============================
+   THEME TOGGLE BUTTON
+=============================== */
+.theme-toggle {
+  border-radius: 999px;
+  width: 2.3rem;
+  height: 2.3rem;
+  border: 1px solid rgba(255, 255, 255, 0.45);
+
+  background: radial-gradient(circle at 35% 30%, #fbbf24, #ea580c);
+  color: #fff;
+
+  box-shadow:
+    0 8px 20px rgba(0, 0, 0, 0.18),
+    inset 0 1px 3px rgba(255, 255, 255, 0.3);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+  transition: transform 0.15s ease;
+}
+
+.theme-toggle:hover {
+  transform: translateY(-2px);
+}
+
+/* ============================
+   RESPONSIVE
+=============================== */
+@media (max-width: 900px) {
+  .navbar {
+    padding-inline: 1.4rem;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+
+  .nav-pill-menu {
+    max-width: 100%;
+    overflow-x: auto;
+    padding-bottom: 0.4rem;
+  }
+}

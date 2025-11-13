@@ -1,3 +1,4 @@
+// src/components/Navbar.jsx
 import { Link, NavLink } from "react-router-dom";
 import "./Navbar.css";
 
@@ -24,29 +25,30 @@ const Navbar = ({ theme, toggleTheme }) => {
 
       <div className="nav-right">
         <NavLink
-  to="/signin"
-  className={({ isActive }) =>
-    "nav-link" + (isActive ? " nav-link-active" : "")
-  }
->
-  Sign in
-</NavLink>
+          to="/signin"
+          className={({ isActive }) =>
+            "nav-link" + (isActive ? " nav-link-active" : "")
+          }
+        >
+          Sign in
+        </NavLink>
 
-<NavLink
-  to="/signup"
-  className={({ isActive }) =>
-    "btn green small" + (isActive ? " btn-active" : "")
-  }
->
-  Sign up
-</NavLink>
+        <NavLink
+          to="/signup"
+          className={({ isActive }) =>
+            "btn green small" + (isActive ? " btn-active" : "")
+          }
+        >
+          Sign up
+        </NavLink>
+
         <button
           type="button"
-          className="theme-toggle"
+          className={`theme-toggle theme-toggle-${theme}`}
           onClick={toggleTheme}
           aria-label="Toggle theme"
         >
-          {theme === "dark" ? "🌙" : "☀️"}
+          {theme === "dark" ? "☀️" : "🌙"}
         </button>
       </div>
     </header>

@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <section className="home-page-wrapper">
       <Plasma
-        color="#7CFF67"        // GREEN BACKGROUND
+        color="#7CFF67"        
         speed={1}
         direction="forward"
         scale={1}

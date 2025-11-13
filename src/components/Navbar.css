@@ -174,8 +174,8 @@
   height: 2.3rem;
   border: 1px solid rgba(255, 255, 255, 0.45);
 
-  background: radial-gradient(circle at 35% 30%, #fbbf24, #ea580c);
-  color: #fff;
+  background: #7CFF67;
+  color: #0d3a0d;
 
   box-shadow:
     0 8px 20px rgba(0, 0, 0, 0.18),

@@ -31,9 +31,6 @@ const Home = () => {
               </a>
             </div>
 
-            <p className="note">
-              ★ Take our FREE quiz to get your personalized fitness plan!
-            </p>
           </div>
 
           <div className="hero-visual">
